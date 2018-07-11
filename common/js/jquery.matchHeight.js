@@ -18,7 +18,7 @@
         // Global
         factory(jquery);
     }
-})(function($) {
+}(function($) {
     /*
     *  internal
     */
