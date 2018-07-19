@@ -1,0 +1,40 @@
+@charset "utf-8";
+.cat-top{
+    @include box;
+    padding: 15px 20px;
+    font-size: 24px;
+    color: #94533B;
+    &::after{
+        @include boxin;
+    }
+}
+
+.cat-list{
+    @include box;
+    &::after{
+        @include boxin;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    li{
+        width: 32.25%;
+        list-style: none;
+        margin-bottom: 15px;
+    }
+    .come{
+        border: #C0A981 1px solid;
+        border-left-width: 20px;
+        margin-top: 10px;
+    }
+    h3{
+        border-bottom: #c0a981 1px solid;
+        padding: 10px;
+    }
+    p{
+        padding: 10px;
+    }
+}

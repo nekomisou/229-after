@@ -1,0 +1,140 @@
+@charset "utf-8";
+.top-wrap{
+    width: /*960px*/76.19%;
+    margin: 0 auto;
+    
+}
+.price-top{
+    @include box;
+    padding: 10px ;
+    margin-bottom: 20px;
+    &::after{
+        @include boxin;
+    }
+    h1{
+        @include h1;
+    }
+}
+.price-wrap{
+   @include box;
+    margin-bottom: 20px;
+    &::after{
+        @include boxin;
+    }
+    .price{
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    ul{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    li{
+        @include list;
+    }
+    h2{
+        width: 100%;
+        padding: 5px 0;
+        color: #94533b;
+        font-size: 18px;
+        border-top: 1px solid #C0A981;
+        border-bottom: 1px solid #C0A981;
+        margin-bottom: 10px;
+    }
+    .table-text{
+        border: #C0A981 1px solid;
+        border-left: #C0A981 15px solid;
+        width: calc(50% - 10px);
+        +.table-text{
+            margin-left: 20px;
+        }
+    }
+    td{
+        border: #C0A981 1px solid;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+.option{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    h2{
+        width: 100%;
+    }
+}
+.option-wrap{
+    width: calc(50% - 10px);
+    +.option-wrap{
+        margin-left: 20px;
+    }
+    span{
+        font-weight: bold;
+    }
+    table{
+        border-left: #C0A981 15px solid;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+.caution{
+    @include box;
+    padding: 10px;
+    margin-bottom: 10px;
+    &::after{
+        @include boxin;
+    }
+    h2{
+        color: #94533B;
+        font-size: 24px;
+        background: url(../images/bg/bg-content-child.png);
+        padding-left: 20px;
+    }
+}
+.caution-text{
+    @include box;
+    padding: 25px 20px;
+    margin-bottom: 20px;
+    &::before{
+        @include boxin;
+    }
+    li{
+        @include list;
+    }
+    p{
+        padding: 5px 0 ;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+        color: #94533b;
+        border-top: #C0A981 1px solid;
+        border-bottom: #C0A981 1px solid;
+    }
+    
+}
+.mark{
+    @include box;
+    background: url(../images/bg/bg-content-child.png);
+    padding: 35px 70px;
+    &::after{
+        @include boxin;
+        background: url(../images/shop-img/bg-banner.png) no-repeat right;
+        background-size: contain;
+        background-color: #73655B;
+        
+    }
+    h2{
+        font-size: 24px;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    p{
+        color: #fff;
+        font-size: 16px;
+    }
+}

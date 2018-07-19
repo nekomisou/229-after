@@ -1,0 +1,44 @@
+@charset "utf-8";
+.ti{
+    @include box;
+    padding: 15px 0;
+    margin-bottom: 10px;
+    &::after{
+        @include boxin;
+    }
+    h1{
+        @include h1;
+    }
+    h2{
+        @include h1;
+    }
+}
+.how-list{
+    @include box;
+    margin-bottom: 20px;
+    &::after{
+        @include boxin;
+    }
+    >ul{
+        @include flexset;
+        >li{
+            width: 49.13%;
+            margin-bottom: 20px;
+        }
+    }
+    
+}
+.come-list{
+    margin-top: 10px;
+    li{
+        @include list;
+    }
+    h3{
+        padding: 5px 0;
+        border-top: #C0A981 1px solid;
+        border-bottom: #C0A981 1px solid;
+        color: #94533b;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}

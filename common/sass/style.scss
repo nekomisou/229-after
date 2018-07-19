@@ -1,0 +1,161 @@
+@charset "UTF-8";
+// ===================================================================
+// 各SCSSファイルのインポート
+// ===================================================================
+
+// 設定用
+@import "setting";
+
+// リセットCSS、フォントサイズ
+@import "reset";
+
+//mixin
+@import "mixin";
+
+*{
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+img{
+    width: 100%;
+    vertical-align: bottom;
+}
+nav{
+    width: 100%;
+    background: url(../images/bg/bg-nav.png) repeat-x;
+    ul{
+        width: /*960px*/76.19%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+    }
+    li{
+        width: 20%;
+        text-align: center;
+        background: url(../images/line-nav.png) no-repeat center right;
+        &:first-child{
+            position: relative;
+            &::before{
+                content: url(../images/line-nav.png);
+                position: absolute;
+                top: 23px;
+                left: 0;
+                /*background: url(../images/line-nav.png) no-repeat center left;*/
+            }
+        }
+    }
+    a{
+        padding: 20px 0;
+        text-decoration: none;
+        color: #a65912;
+        display: block;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: bold;
+        &:hover{
+            background: url(../images/active-nav.png) repeat-x bottom;
+        }
+    }
+    span{
+        color: #000;
+        font-weight: normal;
+    }
+    .active{
+        background: url(../images/active-nav.png) repeat-x bottom;
+        &:hover{
+            color: #fff;
+        }
+    }
+}
+
+//main--------------------------------
+main{
+    background: url(../images/bg/bg-content.png);
+    padding-bottom: 100px;
+    padding-top: 5px;
+}
+.wrap{
+    width: /*960px*/76.19%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.right-column{
+    width: /*705px*/73.43%;
+}
+.left-column{
+    width: 25%;
+}
+.wrap-content{
+    padding: 8px;
+    background: url(../images/bg/main-back.png);
+    margin-bottom: 20px;
+}
+.text{
+    padding: 20px 15px 20px 50px;
+    background: url(../images/bg/bg-content-child.png);
+    h2{
+        padding-bottom: 15px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #94533B;
+        font-size: 18px;
+        color: #94533B;
+    }
+    li{
+        @include list;
+    }
+}
+
+footer{
+    background: url(../images/bg/bg-content-child.png);
+    position: relative;
+    .back-top{
+        width: /*960px*/76.19%;
+        margin: 0 auto;
+        text-align: right;
+        position: relative;
+        bottom: 25px;
+        a{
+            display: block;
+        }
+    }
+    img{
+        width: 120px;
+        border-radius: 3px 3px 0 0;
+    }
+    iframe{
+        margin-top: -10px;
+        vertical-align: bottom;
+    }
+}
+.wrap-text{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 15px 0;
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    bottom: 36px;
+    left: 0;
+}
+.copyright{
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    background: url(../images/bg/bg-content.png);
+}
+
+/*ここからshopのcss---------------------------------------------------------------------------*/
+@import "shop";
+
+/*ぬこ紹介-----------------------------------------------------------------------------------*/
+@import "cat";
+
+/*howtoここから------------------------------------------------------------------------------*/
+@import "howto";
+
+/*ここからcontact---------------------------------------------------------------------------*/
+@import "contact";

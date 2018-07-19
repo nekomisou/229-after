@@ -1,0 +1,47 @@
+@charset "utf-8";
+// ===================================================================
+// mixinやらCSS3やら、extendも。
+// ===================================================================
+//box外側
+@mixin box{
+    background: url(../images/bg/main-back.png);
+        position: relative;
+        z-index: 1;
+        padding: 35px 20px;
+        box-sizing: border-box;
+}
+
+//box内側afterにつける
+@mixin boxin{
+    content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        background: url(../images/bg/bg-content-child.png);
+        z-index: -1;
+        margin: 5px;
+}
+
+@mixin list{
+    list-style: none;
+    background: url(../images/bg/list-top.png) no-repeat;
+    background-size: 8px 8px;
+    background-position: top 3px left;
+    text-indent: 10px;
+}
+
+@mixin h1{
+    color: #94533B;
+    font-size: 24px;
+    padding-left: 20px;
+}
+
+@mixin flexset{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
