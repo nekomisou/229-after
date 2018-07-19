@@ -16,9 +16,9 @@
         module.exports = factory(require('jquery'));
     } else {
         // Global
-        factory(jquery);
+        factory(jQuery);
     }
-}(function($) {
+})(function($) {
     /*
     *  internal
     */
